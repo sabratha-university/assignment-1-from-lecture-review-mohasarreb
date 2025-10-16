@@ -1,13 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
-package com.mycompany.project1_location;
-
-/**
- *
- * @author VENOM S
- */
 public class SimpleLocation {
     protected double latitude;
     protected double longitude;
@@ -41,4 +31,3 @@ public class SimpleLocation {
         System.out.println("Latitude: " + latitude + ", Longitude: " + longitude);
     }
 }
-
