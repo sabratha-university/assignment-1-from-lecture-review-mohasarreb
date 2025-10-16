@@ -1,0 +1,35 @@
+@startuml
+'  الواجهات
+interface Movable {
+  + move(dx:int, dy:int)
+}
+interface Adjustable {
+  + resize(factor: double)
+}
+
+'  الكلاسات
+abstract class Shape {
+  - x: int
+  - y: int
+  - color: String
+  + draw(): void
+  + moveTo(x:int, y:int): void
+}
+
+class Circle {
+  - radius: double
+  + getRadius(): double
+  + setRadius(r: double): void
+  + draw(): void
+  + move(dx:int, dy:int): void
+  + resize(factor: double): void
+}
+
+'  علاقات
+Shape <|-- Circle
+Circle ..|> Movable : implements
+Circle ..|> Adjustable : implements
+
+
+
+@enduml
